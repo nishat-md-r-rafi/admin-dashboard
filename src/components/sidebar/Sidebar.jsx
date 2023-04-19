@@ -1,22 +1,28 @@
-import React from "react";
 import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
-import DeliveryDiningOutlinedIcon from "@mui/icons-material/DeliveryDiningOutlined";
-import QueryStatsOutlinedIcon from "@mui/icons-material/QueryStatsOutlined";
-import CircleNotificationsOutlinedIcon from "@mui/icons-material/CircleNotificationsOutlined";
-import SystemSecurityUpdateGoodOutlinedIcon from "@mui/icons-material/SystemSecurityUpdateGoodOutlined";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import CreditCardIcon from "@mui/icons-material/CreditCard";
+import StoreIcon from "@mui/icons-material/Store";
+import InsertChartIcon from "@mui/icons-material/InsertChart";
+import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-import AssignmentIndOutlinedIcon from "@mui/icons-material/AssignmentIndOutlined";
-import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import { Link } from "react-router-dom";
+import { DarkModeContext } from "../../context/darkModeContext";
+import { useContext } from "react";
 
-function Sidebar(props) {
+const Sidebar = () => {
+  const { dispatch } = useContext(DarkModeContext);
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">logo</span>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span className="logo">Admina</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
@@ -27,59 +33,71 @@ function Sidebar(props) {
             <span>Dashboard</span>
           </li>
           <p className="title">LISTS</p>
+          <Link to="/users" style={{ textDecoration: "none" }}>
+            <li>
+              <PersonOutlineIcon className="icon" />
+              <span>Users</span>
+            </li>
+          </Link>
+          <Link to="/products" style={{ textDecoration: "none" }}>
+            <li>
+              <StoreIcon className="icon" />
+              <span>Products</span>
+            </li>
+          </Link>
           <li>
-            <PersonOutlineIcon className="icon"></PersonOutlineIcon>
-            <span>Users</span>
+            <CreditCardIcon className="icon" />
+            <span>Orders</span>
           </li>
           <li>
-            <ProductionQuantityLimitsIcon className="icon"></ProductionQuantityLimitsIcon>
-            <span>Products</span>
-          </li>
-          <li>
-            <DeliveryDiningOutlinedIcon className="icon"></DeliveryDiningOutlinedIcon>
+            <LocalShippingIcon className="icon" />
             <span>Delivery</span>
           </li>
           <p className="title">USEFUL</p>
           <li>
-            <QueryStatsOutlinedIcon className="icon"></QueryStatsOutlinedIcon>
+            <InsertChartIcon className="icon" />
             <span>Stats</span>
           </li>
           <li>
-            <CircleNotificationsOutlinedIcon className="icon"></CircleNotificationsOutlinedIcon>
+            <NotificationsNoneIcon className="icon" />
             <span>Notifications</span>
           </li>
-
           <p className="title">SERVICE</p>
           <li>
-            <SystemSecurityUpdateGoodOutlinedIcon className="icon"></SystemSecurityUpdateGoodOutlinedIcon>
+            <SettingsSystemDaydreamOutlinedIcon className="icon" />
             <span>System Health</span>
           </li>
           <li>
-            <PsychologyOutlinedIcon className="icon"></PsychologyOutlinedIcon>
+            <PsychologyOutlinedIcon className="icon" />
             <span>Logs</span>
           </li>
           <li>
-            <SettingsOutlinedIcon className="icon"></SettingsOutlinedIcon>
+            <SettingsApplicationsIcon className="icon" />
             <span>Settings</span>
           </li>
-
           <p className="title">USER</p>
           <li>
-            <AssignmentIndOutlinedIcon className="icon"></AssignmentIndOutlinedIcon>
+            <AccountCircleOutlinedIcon className="icon" />
             <span>Profile</span>
           </li>
           <li>
-            <LogoutOutlinedIcon className="icon"></LogoutOutlinedIcon>
-            <span>Log Out</span>
+            <ExitToAppIcon className="icon" />
+            <span>Logout</span>
           </li>
         </ul>
       </div>
       <div className="bottom">
-        <div className="colorOptions"></div>
-        <div className="colorOptions"></div>
+        <div
+          className="colorOption"
+          onClick={() => dispatch({ type: "LIGHT" })}
+        ></div>
+        <div
+          className="colorOption"
+          onClick={() => dispatch({ type: "DARK" })}
+        ></div>
       </div>
     </div>
   );
-}
+};
 
 export default Sidebar;

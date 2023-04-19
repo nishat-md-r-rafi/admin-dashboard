@@ -2,27 +2,28 @@
   display: flex;
 
   .homeContainer {
-    flex: 2;
-    margin-left: 15%;
+    flex: 6;
+
     .widgets,
     .charts {
       display: flex;
-      margin: 5px;
       padding: 20px;
-      gap: 3;
+      gap: 20px;
     }
+
     .charts {
       padding: 5px 20px;
     }
+
     .listContainer {
-      box-shadow: 7px 2px 5px 0px rgba(0, 0, 0, 0.75);
-      -webkit-box-shadow: 7px 2px 5px 0px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 7px 2px 5px 0px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
       padding: 20px;
-      margin-bottom: 20px;
-      margin-top: 20px;
+      margin: 20px;
 
       .listTitle {
+        font-weight: 500;
+        color: gray;
         margin-bottom: 15px;
       }
     }

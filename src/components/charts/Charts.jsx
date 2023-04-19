@@ -9,6 +9,7 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
+  AreaChart,
 } from "recharts";
 
 const data = [
@@ -61,7 +62,7 @@ function Charts(props) {
     <div className="chart">
       <div className="title">Last Revenue</div>
       <ResponsiveContainer width="100%">
-        <LineChart
+        <AreaChart
           width={500}
           height={300}
           data={data}
@@ -84,7 +85,7 @@ function Charts(props) {
             activeDot={{ r: 8 }}
           />
           <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-        </LineChart>
+        </AreaChart>
       </ResponsiveContainer>
     </div>
   );
