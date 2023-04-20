@@ -1,7 +1,9 @@
 import React from 'react'
 import './layout.scss'
-import Topbar from './../topbar/Topbar';
+// import Topbar from './../topbar/Topbar';
 import Sidebar from './../sidebar/Sidebar';
+import Navbar from './../navbar/Navbar';
+
 
 export const Layout = ({children}) => {
   return (
@@ -12,7 +14,7 @@ export const Layout = ({children}) => {
           <div>
             {children}
           </div>
-          <Topbar className="navBar"/>
+          <Navbar className="navBar"/>
         </div>
     </div>
   )

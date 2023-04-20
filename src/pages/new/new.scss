@@ -58,9 +58,11 @@
               border: none;
               border-bottom: 1px solid gray;
 
-              :focus{
-                border: none;
-                border-bottom: 1px solid gray;
+              &:focus{  
+                outline: none;
+                width: 105%;
+                border-bottom: 2.5px solid gray;
+                transition: all 200ms;
               }
             }
           }
@@ -74,6 +76,7 @@
             font-weight: bold;
             cursor: pointer;
             margin-top: 10px;
+            border-radius: 6px;
           }
         }
       }
