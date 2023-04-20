@@ -9,9 +9,7 @@ const New = ({ inputs, title }) => {
 
   return (
     <div className="new">
-      <Sidebar />
       <div className="newContainer">
-        <Navbar />
         <div className="top">
           <h1>{title}</h1>
         </div>
@@ -43,7 +41,7 @@ const New = ({ inputs, title }) => {
               {inputs.map((input) => (
                 <div className="formInput" key={input.id}>
                   <label>{input.label}</label>
-                  <input type={input.type} placeholder={input.placeholder} />
+                  <input type={input.type} placeholder={input.placeholder} className="input" />
                 </div>
               ))}
               <button>Send</button>

@@ -7,8 +7,13 @@ export const Layout = ({children}) => {
   return (
     <div className='layOutContainer'>
         <Sidebar className="sideBar"/>
-        <main>{children}</main>
-        <Topbar className="topBar"/>
+
+        <div className='mainContainer'>
+          <div>
+            {children}
+          </div>
+          <Topbar className="navBar"/>
+        </div>
     </div>
   )
 }
