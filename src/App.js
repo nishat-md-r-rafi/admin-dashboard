@@ -8,6 +8,7 @@ import { Sells } from './pages/sells/Sells';
 import { productInputs, userInputs } from "./fromSource";
 import { Todo } from "./pages/todo/Todo";
 import { Layout } from "./components/layout/Layout";
+import User from "./pages/user/User";
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
           <Route path="new" element={<New />} />
         </Route>
 
+        <Route path="user">
+          <Route index element={<User />} />
+        </Route>
         
       </Routes>
     </Layout>
