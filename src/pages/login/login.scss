@@ -1,3 +1,72 @@
 .login{
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+
+} 
+
+.formWrapper{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 20px 50px;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.labelStyle{
+    font-size: small;
+}
+
+.inputStyle{
+    border: none;
+    border-bottom: 1px solid gray;
+    padding-top: 15px;
+    margin-bottom: 25px;
+
+    &:focus{
+        outline: none;
+        
+    }
+}
+
+.forget{
+    font-size: smaller;
+    text-transform: capitalize;
+    text-align: right;
+    cursor: pointer;
+}
+
+.loginButton{
+    margin: 30px 0px;
+    border: none;
+    background-color: plum;
+    padding: 10px 0;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.signText{
+    font-size: smaller;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 0px;
+}
+
+.icon{
+    cursor: pointer;
+
+    &:hover{
+        color: rgb(239, 171, 176);
+    }
 }
