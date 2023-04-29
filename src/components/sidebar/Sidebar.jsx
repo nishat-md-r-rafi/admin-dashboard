@@ -56,11 +56,14 @@ const Sidebar = () => {
             <span>Orders</span>
           </li>
           </Link>
-          
+
+          <Link to="/delivery">
           <li>
             <LocalShippingIcon className="icon" />
             <span>Delivery</span>
           </li>
+          </Link>
+
           <p className="title">USEFUL</p>
           <li>
             <InsertChartIcon className="icon" />

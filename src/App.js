@@ -44,6 +44,8 @@ function App() {
         <Route path="user">
           <Route index element={<User />} />
         </Route>
+
+        <Route path="/delivery" element={<Sells/>}/>
         
       </Routes>
     </Layout>
