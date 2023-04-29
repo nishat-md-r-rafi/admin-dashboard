@@ -8,7 +8,7 @@ import { Sells } from './pages/sells/Sells';
 import { productInputs, userInputs } from "./fromSource";
 import { Todo } from "./pages/todo/Todo";
 import { Layout } from "./components/layout/Layout";
-import { userColumns, userRows, productsColumns, productsRows } from "./../src/datatablesource";
+import { userColumns, userRows, productsColumns, productsRows, ordersRows, ordersColumns } from "./../src/datatablesource";
 import User from "./pages/user/User";
 
 function App() {
@@ -35,8 +35,8 @@ function App() {
           <Route path="new" element={<New inputs={productInputs} title="Add New Product" />} />
         </Route>
 
-        <Route path="sells">
-          <Route index element={<Sells />} />
+        <Route path="orders">
+          <Route index element={<Lists columns={ordersColumns} rows={ordersRows} />} />
           <Route path=":productId" element={<Single />} />
           <Route path="new" element={<New />} />
         </Route>

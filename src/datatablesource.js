@@ -126,7 +126,7 @@ export const userRows = [
   },
 ];
 
-
+// products columns
 export const productsColumns = [
   { field: "id", headerName: "ID", width: 70 },
   {
@@ -162,8 +162,8 @@ export const productsColumns = [
   },
 ];
 
-// products rows
 
+// products rows
 export const productsRows = [
   {
     id: 1,
@@ -174,3 +174,53 @@ export const productsRows = [
     brand: "Polo",
   },
 ];
+
+// orders columns
+export const ordersColumns = [
+  { field: "id", headerName: "ID", width: 70 },
+  {
+    field: "invoice",
+    headerName: "Invoice",
+    width: 230,
+    renderCell: (params) => {
+      return (
+        <div className="cellWithImg">
+          <Link to="/user">
+          <img className="cellImg" src={params.row.img} alt="avatar" />
+          </Link>
+          {params.row.name}
+        </div>
+      );
+    },
+  },
+  {
+    field: "date",
+    headerName: "Date",
+    width: 230,
+  },
+
+  {
+    field: "status",
+    headerName: "Status",
+    width: 100,
+  },
+  {
+    field: "customer",
+    headerName: "Customer Name",
+    width: 160,
+  },
+];
+
+// orders rows
+export const ordersRows = [
+  {
+    id: 1,
+    invoice: "INV-3030",
+    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    date: new Date(),
+    status: "paid",
+    customer: "Rafi",
+  },
+];
+
+
