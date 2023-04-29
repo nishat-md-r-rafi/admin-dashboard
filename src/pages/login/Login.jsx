@@ -1,5 +1,7 @@
 import "./login.scss"
 import { signInPopup } from '../../utils/firebase/firebase.utils';
+import GoogleIcon from '@mui/icons-material/Google';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 const Login = () => {
   const logGoogleUser = async () => { 
@@ -27,7 +29,7 @@ const Login = () => {
   
        <p className="signText">Or SignUp using</p>
         <div className="icons">
-          <GoogleIcon className="icon"/>
+          <GoogleIcon className="icon" onClick={logGoogleUser}/>
           <TwitterIcon className="icon"/>
         </div>
        <p className="signText">don't have an account? sign up!</p>
