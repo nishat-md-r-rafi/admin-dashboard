@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const userColumns = [
   { field: "id", headerName: "ID", width: 70 },
   {
@@ -7,7 +9,9 @@ export const userColumns = [
     renderCell: (params) => {
       return (
         <div className="cellWithImg">
+          <Link to="/user">
           <img className="cellImg" src={params.row.img} alt="avatar" />
+          </Link>
           {params.row.username}
         </div>
       );
@@ -119,5 +123,54 @@ export const userRows = [
     email: "snow@gmail.com",
     status: "active",
     age: 65,
+  },
+];
+
+
+export const productsColumns = [
+  { field: "id", headerName: "ID", width: 70 },
+  {
+    field: "name",
+    headerName: "Name",
+    width: 230,
+    renderCell: (params) => {
+      return (
+        <div className="cellWithImg">
+          <Link to="/user">
+          <img className="cellImg" src={params.row.img} alt="avatar" />
+          </Link>
+          {params.row.name}
+        </div>
+      );
+    },
+  },
+  {
+    field: "stock",
+    headerName: "Stock",
+    width: 230,
+  },
+
+  {
+    field: "price",
+    headerName: "Price",
+    width: 100,
+  },
+  {
+    field: "brand",
+    headerName: "Brand",
+    width: 160,
+  },
+];
+
+// products rows
+
+export const productsRows = [
+  {
+    id: 1,
+    name: "shirt",
+    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    stock: "active",
+    price: "$30",
+    brand: "Polo",
   },
 ];

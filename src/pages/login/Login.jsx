@@ -16,7 +16,7 @@ const Login = () => {
         <h1 style={{textAlign:"center"}}>Login</h1>
         <form className="loginForm">
           <label className="labelStyle">Name</label>
-          <input className="inputStyle" placeholder={` Name...`}/>
+          <input className=" fa fa-person inputStyle" placeholder={` Name...`}/>
 
           <label className="labelStyle">Email</label>
           <input className="inputStyle" placeholder=" Email..."/>

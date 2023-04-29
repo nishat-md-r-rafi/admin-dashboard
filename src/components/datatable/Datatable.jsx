@@ -4,8 +4,9 @@ import { userColumns, userRows } from "../../datatablesource";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const Datatable = () => {
-  const [data, setData] = useState(userRows);
+const Datatable = ({columns, rows}) => {
+  // const [data, setData] = useState(userRows);
+  console.log(columns, rows)
 
 
   return (
@@ -18,8 +19,8 @@ const Datatable = () => {
       </div>
       <DataGrid
         className="datagrid"
-        rows={data}
-        columns={userColumns}
+        rows={rows}
+        columns={columns}
         pageSize={9}
         rowsPerPageOptions={[9]}
         checkboxSelection
