@@ -23,14 +23,14 @@ export const Sells = () => {
       <div className='cardContainer'>
         <div className='infoContainer'>
           <div>
-            <p>title</p>
+            <p>parcel delivered</p>
             
           </div>
           <h1>3</h1>
         </div>
         <div className='infoContainer'>
           <div>
-            <p>title</p>
+            <p>parcel transit</p>
             
           </div>
           <h1>3</h1>
@@ -38,16 +38,20 @@ export const Sells = () => {
       </div>
 
       <div className='chartContainer'>
+        {/* bar chart  */}
         <div className='barChart'>
-        <BarChart width={730} height={250} data={data} margin={{top: 20, right: 20, bottom: 20, left: 20}} >
-          <XAxis dataKey="name" />
-          <CartesianGrid stroke="#ccc" />
-          <YAxis />
-          <Tooltip />
-          <Bar dataKey="sell" fill="#8884d8" />
-        </BarChart>
+          <div className='chartTitle'>
+            <p>parcels delivered</p>
+            <p>total : 1000</p>
+          </div>
+          <BarChart width={500} height={250} data={data} margin={{top: 20, right: 20, bottom: 20, left: 20}} >
+            <XAxis dataKey="name" />
+            <CartesianGrid stroke="#ccc" />
+            <YAxis />
+            <Tooltip />
+            <Bar dataKey="sell" fill="#8884d8" />
+          </BarChart>
         </div>
-
         <div></div>
       </div>
       
