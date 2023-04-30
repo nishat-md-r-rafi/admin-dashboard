@@ -10,6 +10,7 @@ import { Todo } from "./pages/todo/Todo";
 import { Layout } from "./components/layout/Layout";
 import { userColumns, userRows, productsColumns, productsRows, ordersRows, ordersColumns } from "./../src/datatablesource";
 import User from "./pages/user/User";
+import { Stats } from "./pages/stats/Stats";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         </Route>
 
         <Route path="/delivery" element={<Sells/>}/>
+        <Route path="/stats" element={<Stats/>}/>
         
       </Routes>
     </Layout>

@@ -65,10 +65,14 @@ const Sidebar = () => {
           </Link>
 
           <p className="title">USEFUL</p>
+
+          <Link to="/stats">
           <li>
             <InsertChartIcon className="icon" />
             <span>Stats</span>
           </li>
+          </Link>
+          
           <li>
             <NotificationsNoneIcon className="icon" />
             <span>Notifications</span>

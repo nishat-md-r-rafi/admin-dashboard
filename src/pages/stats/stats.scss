@@ -1,0 +1,29 @@
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pieContainer{
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    padding: 30px;
+
+    .titleContainer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+}
+
+.earningInfoCon{
+    .earningInfo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+        padding: 30px;
+    }
+}
